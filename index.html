@@ -2,35 +2,41 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>文章標題</title>
+  <title>複製文字並跳轉</title>
   <style>
-    body { max-width: 800px; margin: 40px auto; font-family: sans-serif; line-height: 1.6; padding: 0 20px; }
-    header { text-align: center; margin-bottom: 2em; }
-    h1 { font-size: 2.5em; margin-bottom: 0.2em; }
-    .date { color: #666; font-size: 0.9em; margin-bottom: 1.5em; }
-    hr { margin: 2em 0; border: none; border-top: 1px solid #ddd; }
-    .content { margin-bottom: 1em; }
-    .more a { color: #0366d6; text-decoration: none; }
+    body { font-family: sans-serif; text-align: center; padding: 50px; }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>文章標題</h1>
-    <div class="date">2025-08-11</div>
-  </header>
 
-  <div class="content">
-    <p>這是文章的前半段內容，作為摘要展示。</p>
-    <div class="more">
-      <a href="#full">閱讀更多 …</a>
-    </div>
-  </div>
+  <h1>按鈕測試</h1>
+  <p>點擊按鈕後，會複製文字並跳轉到指定網頁。</p>
+  
+  <button onclick="copyAndRedirect()">複製並前往</button>
 
-  <hr id="full">
+  <script>
+    function copyAndRedirect() {
+      const textToCopy = "SSSSSSS"; // 你要複製的內容
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        // 複製成功後跳轉
+        window.location.href = "https://s.shopee.tw/AKQJ93tiLr"; // 你要導向的網址
+      }).catch(err => {
+        alert("複製失敗：" + err);
+      });
+    }
+  </script>
 
-  <div class="content full-content">
-    <p>這裡是完整的文章內容，顯示更多細節、段落或圖片。</p>
-    <p>可以依需要自由延續，甚至插入其他區段。</p>
-  </div>
 </body>
 </html>
