@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>複製文字並跳轉</title>
+  <title>社團專屬折扣$100-20</title>
   <style>
     body { font-family: sans-serif; text-align: center; padding: 50px; }
     button {
@@ -21,14 +21,14 @@
 </head>
 <body>
 
-  <h1>按鈕測試</h1>
-  <p>點擊按鈕後，會複製文字並跳轉到指定網頁。</p>
+  <h1>優惠碼</h1>
+  <p>點擊後自動複製，網頁貼上折扣碼領券。</p>
   
-  <button onclick="copyAndRedirect()">複製並前往</button>
+  <button onclick="copyAndRedirect()">第一組</button>
 
   <script>
     function copyAndRedirect() {
-      const textToCopy = "SSSSSSS"; // 你要複製的內容
+      const textToCopy = "AAAA"; // 你要複製的內容
       navigator.clipboard.writeText(textToCopy).then(() => {
         // 複製成功後跳轉
         window.location.href = "https://s.shopee.tw/AKQJ93tiLr"; // 你要導向的網址
@@ -37,6 +37,18 @@
       });
     }
   </script>
+  <button onclick="copyAndRedirect()">第二組</button>
 
+  <script>
+    function copyAndRedirect() {
+      const textToCopy = "BBBB"; // 你要複製的內容
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        // 複製成功後跳轉
+        window.location.href = "https://s.shopee.tw/AKQJ93tiLr"; // 你要導向的網址
+      }).catch(err => {
+        alert("複製失敗：" + err);
+      });
+    }
+  </script>
 </body>
 </html>
